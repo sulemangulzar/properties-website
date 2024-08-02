@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         custom: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         primary: "#364436",
