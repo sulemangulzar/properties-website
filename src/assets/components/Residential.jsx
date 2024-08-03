@@ -15,11 +15,11 @@ const Residential = () => {
     <>
       <div className="bg-primary font-custom py-6 lg:h-[700px] flex flex-col justify-center">
         <div className="flex flex-col items-center justify-center mx-4 md:mx-8 lg:mx-16 xl:mx-24 gap-12">
-          <div className="w-full flex flex-col items-center md:items-start md:px-12 lg:px-24 xl:px-32 ">
-            <h1 className="text-center md:text-left text-3xl md:text-4xl lg:text-5xl font-semibold text-white pt-8 md:pt-12">
+          <div className="w-full flex flex-col items-center md:items-start md:px-12 lg:px-24 xl:px-28 ">
+            <h1 className="text-center md:text-left text-3xl md:text-4xl  font-semibold text-white pt-8 md:pt-12">
               RESIDENTIAL
             </h1>
-            <span className="text-center md:text-left text-3xl md:text-4xl lg:text-5xl font-bold text-white pb-4">
+            <span className="text-center md:text-left text-3xl md:text-4xl  font-bold text-white pb-4">
               HOME.
             </span>
           </div>
@@ -66,53 +66,82 @@ const Residential = () => {
               </li>
             </ul>
 
-            <div className="text-center">
+            <div className="text-center transition-opacity duration-500 ease-in-out">
               {selectedCategory === "Residential" && (
-                <>
+                <div
+                  className="opacity-0 transition-opacity duration-500 ease-in-out"
+                  style={{
+                    opacity: selectedCategory === "Residential" ? 1 : 0,
+                  }}
+                >
                   <img
                     src={Newzealandimage}
                     alt="Residential"
-                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg"
+                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg transition-transform transform duration-500 ease-in-out"
+                    style={{
+                      transform:
+                        selectedCategory === "Residential"
+                          ? "translateY(0)"
+                          : "translateY(-20px)",
+                    }}
                   />
                   <div className="flex flex-col mt-4 gap-2 items-center justify-center">
                     <p className="text-base text-white">
-                      Auckland, New zealand
+                      Auckland, New Zealand
                     </p>
                     <h1 className="text-2xl text-white font-semibold tracking-wide">
                       Sightseeing residence
                     </h1>
                     <p className="text-sm text-white hover:underline underline-offset-4">
-                      See detials
+                      See details
                     </p>
                   </div>
-                </>
+                </div>
               )}
               {selectedCategory === "Museum" && (
-                <>
+                <div
+                  className="opacity-0 transition-opacity duration-500 ease-in-out"
+                  style={{ opacity: selectedCategory === "Museum" ? 1 : 0 }}
+                >
                   <img
                     src={usmeseum}
-                    alt="Residential"
-                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg"
+                    alt="Museum"
+                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg transition-transform transform duration-500 ease-in-out"
+                    style={{
+                      transform:
+                        selectedCategory === "Museum"
+                          ? "translateY(0)"
+                          : "translateY(-20px)",
+                    }}
                   />
                   <div className="flex flex-col mt-4 gap-2 items-center justify-center">
                     <p className="text-base text-white">
-                      San Fransicso, United States
+                      San Francisco, United States
                     </p>
                     <h1 className="text-2xl text-white font-semibold tracking-wide">
                       US Museum
                     </h1>
                     <p className="text-sm text-white hover:underline underline-offset-4">
-                      See detials
+                      See details
                     </p>
                   </div>
-                </>
+                </div>
               )}
               {selectedCategory === "Education" && (
-                <>
+                <div
+                  className="opacity-0 transition-opacity duration-500 ease-in-out"
+                  style={{ opacity: selectedCategory === "Education" ? 1 : 0 }}
+                >
                   <img
                     src={dubaiuni}
-                    alt="Residential"
-                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg"
+                    alt="Education"
+                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg transition-transform transform duration-500 ease-in-out"
+                    style={{
+                      transform:
+                        selectedCategory === "Education"
+                          ? "translateY(0)"
+                          : "translateY(-20px)",
+                    }}
                   />
                   <div className="flex flex-col mt-4 gap-2 items-center justify-center">
                     <p className="text-base text-white">Dubai, UAE</p>
@@ -120,17 +149,26 @@ const Residential = () => {
                       Dubai University
                     </h1>
                     <p className="text-sm text-white hover:underline underline-offset-4">
-                      See detials
+                      See details
                     </p>
                   </div>
-                </>
+                </div>
               )}
               {selectedCategory === "Library" && (
-                <>
+                <div
+                  className="opacity-0 transition-opacity duration-500 ease-in-out"
+                  style={{ opacity: selectedCategory === "Library" ? 1 : 0 }}
+                >
                   <img
                     src={qatarlibrary}
-                    alt="Residential"
-                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg"
+                    alt="Library"
+                    className="w-full max-w-md lg:max-w-lg mx-auto rounded shadow-lg transition-transform transform duration-500 ease-in-out"
+                    style={{
+                      transform:
+                        selectedCategory === "Library"
+                          ? "translateY(0)"
+                          : "translateY(-20px)",
+                    }}
                   />
                   <div className="flex flex-col mt-4 gap-2 items-center justify-center">
                     <p className="text-base text-white">Doha, Qatar</p>
@@ -138,10 +176,10 @@ const Residential = () => {
                       Library
                     </h1>
                     <p className="text-sm text-white hover:underline underline-offset-4">
-                      See detials
+                      See details
                     </p>
                   </div>
-                </>
+                </div>
               )}
             </div>
           </div>

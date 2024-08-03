@@ -6,6 +6,8 @@ import Navbar from "./assets/components/Navbar";
 import Latestprojects from "./assets/components/Latestprojects";
 import Services from "./assets/components/Services";
 import Quietspace from "./assets/components/Quietspace";
+import Residential from "./assets/components/Residential";
+import Contact from "./assets/components/Contact";
 function App() {
   return (
     <>
@@ -19,7 +21,7 @@ function App() {
             backgroundRepeat: "no-repeat", // Prevents the image from repeating
           }}
         >
-          <div className="absolute top-0 left-0 bg-black/40 w-full h-full ">
+          <div className="absolute top-0 left-0 bg-black/30 w-full h-full ">
             <Navbar />
             <Home />
           </div>
@@ -43,6 +45,9 @@ function App() {
         </section>
         <section>
           <Residential />
+        </section>
+        <section>
+          <Contact />
         </section>
       </div>
     </>
