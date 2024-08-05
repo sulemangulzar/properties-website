@@ -16,7 +16,34 @@ const Navbar = () => {
         className={`fixed top-0 left-0 z-30 h-screen w-64 bg-primary transition-transform duration-500 ease-in-out ${
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
-      ></div>{" "}
+      >
+        <div className="flex flex-col items-center justify-center gap-2 mt-12 ">
+          <div className="w-16 h-16 rounded-full bg-white"></div>
+          <p className="text-white text-[9px]">Profile</p>
+        </div>
+        <div className="flex flex-col items-start  mx-4 mt-12 gap-2">
+          <a className="text-white/80 hover:text-white" href="">
+            Home
+          </a>
+          <a className="text-white/80 hover:text-white" href="">
+            Projects
+          </a>
+          <a className="text-white/80 hover:text-white" href="">
+            Services
+          </a>
+          <a className="text-white/80 hover:text-white" href="">
+            Residentials
+          </a>
+          <a className="text-white/80 hover:text-white" href="">
+            Contact
+          </a>
+        </div>
+        <div className="flex items-center justify-center mt-12">
+          <button className="px-8 py-3 bg-white font-semibold rounded-full">
+            Sign Up
+          </button>
+        </div>
+      </div>{" "}
       <div
         className={`fixed top-0 left-0 w-full h-screen z-20  bg-black/40 transition-transform duration-500 ease-in-out ${
           nav ? "translate-x-0" : "translate-x-full"

@@ -8,10 +8,11 @@ import Services from "./assets/components/Services";
 import Quietspace from "./assets/components/Quietspace";
 import Residential from "./assets/components/Residential";
 import Contact from "./assets/components/Contact";
+import Footer from "./assets/components/Footer";
 function App() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto font-custom ">
+      <div className="max-w-screen-xl mx-auto font-custom bg-primary ">
         <section
           className="relative w-full h-screen  xl:h-[800px]"
           style={{
@@ -48,6 +49,9 @@ function App() {
         </section>
         <section>
           <Contact />
+        </section>
+        <section>
+          <Footer />
         </section>
       </div>
     </>
